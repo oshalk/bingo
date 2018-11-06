@@ -86,4 +86,4 @@ clean:
 .PHONY: install
 install: all
 	install -d $(DESTDIR)$(bindir)
-	install bingo $(DESTDIR)$(bindir)/bingo
+	install deliverables/linux/Release/bingo $(DESTDIR)$(bindir)/bingo
