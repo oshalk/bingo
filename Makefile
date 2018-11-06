@@ -11,6 +11,9 @@
 #/*            BINGO                                                       */
 #/*------------------------------------------------------------------------*/
 
+prefix = /usr
+bindir = $(prefix)/bin
+
 #----------------------------------------------------------------------------
 # tools used in makefile
 #----------------------------------------------------------------------------
@@ -80,4 +83,8 @@ clean:
 	@$(RMDIR) $(RMFLAGS) $(OUTPUT_DIR)
 	
 
+.PHONY: install
+install: all
+	install -d $(DESTDIR)$(bindir)
+install bingo $(DESTDIR)$(bindir)/bingo
 
